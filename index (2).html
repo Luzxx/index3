@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VerazYa – Informe Veraz rápido, seguro y en PDF</title>
+  <meta name="description" content="Obtené tu Informe Veraz en minutos. Servicio rápido, legal y seguro. Pago online y entrega en PDF. 8+ años de experiencia." />
+  <meta name="theme-color" content="#e11d48" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d10;--card:#12151a;--muted:#9aa3af;--text:#e5e7eb;
+      --brand:#e11d48;--brand-600:#be123c;--ok:#10b981;--warn:#f59e0b;
+      --ring:0 0 0 3px rgba(225,29,72,.35);--shadow:0 20px 40px rgba(0,0,0,.35)
+    }
+    *{box-sizing:border-box} html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b0d10 0%,#0f1216 100%);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin-inline:auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--brand);color:#fff;padding:.9rem 1.2rem;border-radius:14px;font-weight:600;border:none;cursor:pointer;transition:.2s}
+    .btn:hover{background:var(--brand-600);box-shadow:var(--shadow);transform:translateY(-1px)}
+    header{position:sticky;top:0;z-index:40;background:rgba(11,13,16,.7);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #1d2229}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:800}
+    .brand-mark{width:28px;height:28px;border-radius:8px;background:radial-gradient(90% 90% at 30% 30%,#fff 0%,#ffd1db 15%,#fb7185 45%,#e11d48 100%)}
+    .menu{display:flex;gap:1rem;align-items:center}
+    .menu a{color:var(--muted);font-weight:500}.menu a:hover{color:#fff}
+    .hero{padding:72px 0 30px;border-bottom:1px solid #1d2229}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    h1{font-size:clamp(28px,4.6vw,46px);line-height:1.1;margin:.6rem 0 1rem}
+    .lead{color:#cbd5e1;font-size:clamp(15px,2.2vw,18px);max-width:54ch}
+    .hero-card{background:linear-gradient(180deg,#12161d,#0f141b);border:1px solid #1e2631;border-radius:18px;box-shadow:var(--shadow);padding:20px}
+    .price{display:flex;align-items:baseline;gap:.4rem;font-weight:800}.price .big{font-size:32px}
+    .section{padding:60px 0;border-bottom:1px solid #1d2229}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid #1e2631;border-radius:16px;padding:18px}
+    .card h3{margin:.2rem 0 .6rem}.muted{color:var(--muted)}
+    form{display:grid;gap:12px}
+    input,textarea{width:100%;background:#0f141b;border:1px solid #232b36;color:#fff;padding:.9rem;border-radius:12px;outline:none}
+    input:focus,textarea:focus{box-shadow:var(--ring);border-color:#2e3a47}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    footer{padding:28px 0}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}
+    .footgrid a{color:#cbd5e1}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top"><span class="brand-mark"></span><span>VerazYa</span></a>
+      <nav class="menu"><a href="#como">Cómo funciona</a><a href="#precio">Precio</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <h1>Obtené tu <span style="color:var(--brand)">Informe Veraz</span> en minutos</h1>
+        <p class="lead">Conocé tu situación crediticia de forma clara y segura. Te entregamos un PDF completo y entendible para que sepas dónde estás parado y qué podés hacer.</p>
+        <a class="btn" href="#solicitud">Solicitar mi informe</a>
+      </div>
+      <aside class="hero-card">
+        <h2>Tu informe, hoy</h2>
+        <div class="price"><span class="big">$8.000</span><span class="muted">precio único</span></div>
+        <a class="btn" href="#solicitud">Solicitar ahora</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="solicitud">
+    <div class="container">
+      <h2>Solicitá tu Informe Veraz</h2>
+      <div class="grid-3" style="grid-template-columns:1.1fr .9fr 0">
+        <form id="formCompra" class="card" novalidate>
+          <div class="row">
+            <input id="nombre" name="nombre" required placeholder="Nombre" />
+            <input id="apellido" name="apellido" required placeholder="Apellido" />
+          </div>
+          <div class="row">
+            <input id="dni" name="dni" required placeholder="DNI" />
+            <input id="whatsapp" name="whatsapp" required placeholder="WhatsApp" />
+          </div>
+          <input id="email" name="email" type="email" required placeholder="Email" />
+          <textarea id="notas" name="notas" rows="3" placeholder="Comentarios"></textarea>
+          <label><input type="checkbox" id="privacidad" required /> <span>Acepto la política de privacidad</span></label>
+          <button class="btn" type="submit">Obtener mi informe</button>
+        </form>
+        <aside class="card" id="precio">
+          <h3>Resumen</h3>
+          <div class="price"><span class="big">$8.000</span><span class="muted">precio único</span></div>
+          <a class="btn" id="btnPagar" href="#">Ir a pagar</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container"><small class="muted">© <span id="y"></span> VerazYa</small></div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('y').textContent = new Date().getFullYear();
+
+      const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzJ4XXhuY9ndRO6FRHDWE3_79xJDiwbhU7yXfCD8fScfKqsM_dY9IUgXC_htGNiO_tw/exec";
+      const form = document.getElementById('formCompra');
+      const btnPagar = document.getElementById('btnPagar');
+
+      async function crearPreferenciaGET(fd){
+        const q = new URLSearchParams();
+        for (const [k,v] of fd.entries()) q.append(k, v);
+        q.append('monto','8000');
+        q.append('route','create');
+        const url = WEBAPP_URL + '?' + q.toString();
+        const res = await fetch(url, { method: 'GET' });
+        const txt = await res.text();
+        try { return JSON.parse(txt); } catch { return { ok:false, error:'Respuesta no válida', raw: txt }; }
+      }
+
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        if(!form.checkValidity()){ form.reportValidity(); return; }
+        const r = await crearPreferenciaGET(new FormData(form));
+        if (r.ok && r.init_point) { window.location.href = r.init_point; }
+        else { alert('No se pudo iniciar el pago: ' + (r.error || 'Reintentá')); console.log(r); }
+      });
+
+      btnPagar?.addEventListener('click', (e)=>{ e.preventDefault(); form.requestSubmit(); });
+    });
+  </script>
+</body>
+</html>
